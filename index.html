@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <header>
     <nav>
@@ -17,7 +18,11 @@
         <li><a href="#">Projetos</a></li>
         <li><a href="#">Contato</a></li>
       </ul>
+      <button id="theme-toggle">🌙</button>
     </nav>
+    
+
+
   </header>
 
   <main>
@@ -38,21 +43,24 @@
     </aside>
 
     <section class="intro">
+      
       <h2>Olá!</h2>
       <h3>Me chamo Jared,</h3>
       <h3>Desenvolvedor frontend</h3>
       <h3>Transformo sua ideia em uma página web!</h3>
+
     </section>
   </main>
 
 <script>
     const toggleBtn = document.getElementById('theme-toggle');
     toggleBtn.addEventListener('click', () => {
+      
       document.body.classList.toggle('light-mode');
       toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
-    });
-  </script>
-  
 
+    });
+ </script>
+  
 </body>
 </html>
