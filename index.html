@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jared Aguirra - Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Meu Site</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Seção Início</h2>
-            <p>Esta é a seção inicial do site.</p>
-        </section>
-        <section id="about">
-            <h2>Seção Sobre</h2>
-            <p>Esta é a seção sobre do site.</p>
-        </section>
-        <section id="contact">
-            <h2>Seção Contato</h2>
-            <p>Esta é a seção de contato do site.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
-    </footer>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Sobre mim</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <aside class="sidebar">
+      <h1><span>Jared</span><br>Aguirra</h1>
+      <img src="profile.jpg" alt="Jared Aguirra">
+      <div class="info">
+        <p><strong>Experiência:</strong><br>UI/UX designer<br>Frontend developer</p>
+        <p><strong>Localização:</strong><br>Londrina, Brasil</p>
+      </div>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-discord"></i>
+        <i class="fab fa-github"></i>
+      </div>
+      <button>Vamos trabalhar!</button>
+    </aside>
+
+    <section class="intro">
+      <h2>Olá!</h2>
+      <h3>Me chamo Jared,</h3>
+      <h3>Desenvolvedor frontend</h3>
+      <h3>Transformo sua ideia em uma página web!</h3>
+    </section>
+  </main>
+
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+    });
+  </script>
+  
+
 </body>
 </html>

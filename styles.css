@@ -1,59 +1,186 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #4cc7c7;
+    --card-bg: #111;
+    --button-bg: #4cc7c7;
+    --button-text: #fff;
+  }
+  
+  .light-mode {
+    --bg-color: #f0f0f0;
+    --text-color: #0d0d0d;
+    --card-bg: #ffffff;
+    --button-bg: #0d0d0d;
+    --button-text: #fff;
+  }
+  
+  * {
+    transition: all 0.3s ease;
+  }
+  
+  body {
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header styles */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    padding: 20px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  nav ul {
     list-style: none;
+    display: flex;
+    gap: 30px;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
+    margin: 0;
+  }
+  
+  nav a {
+    color: var(--text-color);
     text-decoration: none;
-}
-
-/* Section styles */
-section {
-    padding: 2rem;
-    margin: 1rem auto;
-    background: #fff;
-    border-radius: 5px;
-    max-width: 800px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    color: #333;
-}
-
-/* Footer styles */
-footer {
+    font-weight: bold;
+  }
+  
+  nav a.active {
+    color: #00c9a7;
+    font-style: italic;
+  }
+  
+  #theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  main {
+    display: flex;
+    padding: 40px;
+    gap: 60px;
+    justify-content: center;
+  }
+  
+  .sidebar {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    margin-top: 2rem;
-}
+  }
+  
+  .sidebar h1 span {
+    color: #4cc7c7;
+  }
+  
+  .sidebar img {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .info {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 28px;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  @media (max-width: 1024px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .intro {
+      font-size: 24px;
+      text-align: center;
+      align-items: center;
+      max-width: 90%;
+    }
+  
+    .sidebar {
+      width: 90%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    nav a {
+      font-size: 16px;
+    }
+  
+    .intro h2,
+    .intro h3 {
+      font-size: 22px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    .social-icons {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .sidebar img {
+      width: 100%;
+    }
+  }
+  
